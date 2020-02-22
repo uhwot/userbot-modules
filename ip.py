@@ -20,7 +20,7 @@ class IPLookup(loader.Module):
         self.name = self.strings["name"]
 
     async def ipcmd(self, message):
-        """Use as .ip <ip> (optional)"""
+        """Use as .ip <ip / domain> (optional)"""
         ip = utils.get_args_raw(message)
 
         lookup = get(f"http://ip-api.com/json/{ip}").json()
